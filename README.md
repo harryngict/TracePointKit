@@ -1,5 +1,5 @@
-## I. How to set up the environment to run iosmodularkits repository
-### A: Clone iosmodularkits repo to your machine
+## I. How to set up the environment to run TracePointKit repository
+### A: Clone TracePointKit repo to your machine
 
 ```Script
 git clone git@github.com:harryngict/TracePointKit.git
@@ -18,7 +18,7 @@ brew install make
 
 ### C: Set Up TracePointKit Tools Required
 
-This step is required only once when you first set up the project. Use the cd command to move to the root folder of iosmodularkits that you cloned in for example:
+This step is required only once when you first set up the project. Use the cd command to move to the root folder of TracePointKit that you cloned in for example:
 ```script
 cd ../../TracePointKit
 ```
