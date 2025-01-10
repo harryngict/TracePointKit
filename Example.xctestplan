@@ -1,0 +1,53 @@
+{
+  "configurations" : [
+    {
+      "id" : "6E7997C7-0ECC-4317-996F-2C76458A3488",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Pods\/Pods.xcodeproj",
+          "identifier" : "4B3A04F79EAE986CE0D04F548181E5C3",
+          "name" : "ExperimentKitImp"
+        },
+        {
+          "containerPath" : "container:Pods\/Pods.xcodeproj",
+          "identifier" : "41AEB6807C86426C0276EDB964FA4731",
+          "name" : "FlowTrackerKitImp"
+        },
+        {
+          "containerPath" : "container:Pods\/Pods.xcodeproj",
+          "identifier" : "A64E43BA81A54629B8B10C30B68F7E6A",
+          "name" : "PersistentStoreKitImp"
+        },
+        {
+          "containerPath" : "container:Pods\/Pods.xcodeproj",
+          "identifier" : "4BEDB38A17F036C443C62CD0B0CB14E5",
+          "name" : "InAppMessagingKitImp"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Example.xcodeproj",
+      "identifier" : "DD4AA6292C19FAB800D22682",
+      "name" : "Example"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Example.xcodeproj",
+        "identifier" : "DD4AA6442C19FB1D00D22682",
+        "name" : "ExampleTests"
+      }
+    }
+  ],
+  "version" : 1
+}

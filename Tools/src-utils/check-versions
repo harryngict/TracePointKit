@@ -1,0 +1,37 @@
+#!/bin/bash
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+source Tools/src-utils/colors
+
+EXPECTED_SWIFTFORMAT_VERSION="0.54.0" 
+
+check_mockolo_tools() {
+    echo -e "\n*** Checking mockolo installed ***\n"
+    local TOOLS=("swiftformat" "mockolo")
+
+    for TOOL in ${TOOLS[*]}; do
+        if ! hash "$TOOL" 2>/dev/null; then
+            echo -e "${COLOR_RED}The script requires '$TOOL' to be installed. To resolve that, run './bootstrap' first.${COLOR_RESET}\n"
+            exit 1
+        fi
+    done
+    echo -e "${COLOR_GREEN}All required tools are installed.${COLOR_RESET}\n"
+}
+
+check_swiftformat_versions() {
+    echo -e "\n*** Checking swiftformat versions ***\n"
+
+    SWIFTFORMAT_VERSION=$(swiftformat --version)
+
+    if [ "$(printf '%s\n' "$SWIFTFORMAT_VERSION" "$EXPECTED_SWIFTFORMAT_VERSION" | sort -V | head -n1)" != "$EXPECTED_SWIFTFORMAT_VERSION" ]; then
+        echo -e "${COLOR_RED}Expected swiftformat version $EXPECTED_SWIFTFORMAT_VERSION but found $SWIFTFORMAT_VERSION. Please install the correct version.${COLOR_RESET}\n"
+        exit 1
+    else
+        echo -e "${COLOR_GREEN}SwiftFormat version $SWIFTFORMAT_VERSION is correct.${COLOR_RESET}\n"
+    fi
+}
+
+check_mockolo_tools
+check_swiftformat_versions

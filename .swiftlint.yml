@@ -1,0 +1,108 @@
+excluded:
+  - ${PWD}/Example
+  - ${PWD}/Dangerfile.swift
+  - ${PWD}/.swiftlint.yml
+
+### For now we have to disable some rule. We will update it later
+disabled_rules:
+  - discarded_notification_center_observer
+  - notification_center_detachment
+  - orphaned_doc_comment
+  - unused_capture_list
+  - multiline_parameters_brackets
+  - implicitly_unwrapped_optional
+  - redundant_optional_initialization
+  - trailing_comma
+  - function_parameter_count
+  - computed_accessors_order
+  - identifier_name
+  - opening_brace
+  - line_length
+  - vertical_parameter_alignment
+  - xctfail_message
+  - control_statement
+  - force_cast
+
+opt_in_rules:
+  - array_init
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - colon # promote to error
+  - convenience_type
+  - discouraged_object_literal
+  - empty_collection_literal
+  - empty_count
+  - empty_string
+  - enum_case_associated_values_count
+  - fatal_error_message
+  - first_where
+  - force_unwrapping
+  - last_where
+  - legacy_random
+  - multiline_arguments
+  - multiline_function_chains
+  - operator_usage_whitespace
+  - overridden_super_call
+  - pattern_matching_keywords
+  - prefer_self_type_over_type_of_self
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - strict_fileprivate
+  - toggle_bool
+  - unneeded_parentheses_in_closure_argument
+  - unused_import
+  - yoda_condition
+
+custom_rules:
+  array_constructor:
+    name: "Array/Dictionary initializer"
+    regex: '[let,var] .+ = (\[.+\]\(\))'
+    capture_group: 1
+    message: "Use explicit type annotation when initializing empty arrays and dictionaries"
+    severity: warning
+
+custom_rules:
+  prevent_year_by_week_format:
+    name: "Do not use YYYY"
+    message: "year format must be yyyy"
+    regex: '^.*YYYY.*$'
+    severity: error
+
+attributes:
+  always_on_same_line:
+    - "@IBSegueAction"
+    - "@IBAction"
+    - "@NSManaged"
+    - "@objc"
+
+force_cast: warning
+force_try: warning
+function_body_length:
+    warning: 80
+
+legacy_hashing: error
+
+indentation_width:
+  indentation_width: 2
+
+multiline_arguments:
+  first_argument_location: next_line
+  only_enforce_after_first_closure_on_first_line: true
+  
+private_over_fileprivate:
+  validate_extensions: true
+
+trailing_whitespace:
+  ignores_empty_lines: true
+  ignores_comments: true
+
+type_body_length:
+  warning: 300
+
+vertical_whitespace:
+  max_empty_lines: 2
+
+file_length:
+  warning: 600

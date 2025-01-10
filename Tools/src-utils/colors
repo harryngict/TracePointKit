@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+COLOR_RED=$(tput setaf 1)
+COLOR_GREEN=$(tput setaf 2)
+COLOR_YELLOW=$(tput setaf 3)
+COLOR_RESET=$(tput sgr0)

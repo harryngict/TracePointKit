@@ -1,0 +1,26 @@
+# Xcode
+.DS_Store
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/
+*.xcuserstate
+*.xcshareddata
+
+# Build products
+build/
+Reports/
+DerivedData/
+
+
+# SPM
+.build/
+.swiftpm/
+Packages/
+Package.pins
+Package.resolved
+
+# CocoaPods
+Pods/
+Gemfile.lock
+Podfile.lock

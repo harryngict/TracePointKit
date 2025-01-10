@@ -1,0 +1,13 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: format-code
+        name: Code formatting task
+        entry: Tools/format-code
+        language: script
+        files: \.swift$
+    -   id: validation-code
+        name: Pre-commit check before creating pull request
+        entry: Scripts/pre-commit.sh
+        language: script
+        files: \.swift$
