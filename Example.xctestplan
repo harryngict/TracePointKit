@@ -40,14 +40,7 @@
     }
   },
   "testTargets" : [
-    {
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:Example.xcodeproj",
-        "identifier" : "DD4AA6442C19FB1D00D22682",
-        "name" : "ExampleTests"
-      }
-    }
+
   ],
   "version" : 1
 }
